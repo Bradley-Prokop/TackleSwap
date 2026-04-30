@@ -1,0 +1,9 @@
+.signup-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+
+  background: var(--background);
+}
