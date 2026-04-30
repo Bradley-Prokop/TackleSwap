@@ -1,12 +1,67 @@
 import InputField from "./InputField";
 import { useState } from "react";
 import "./AuthForm.css";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../../config/firebase";
+import { useNavigate } from "react-router-dom";
+
+//To do
+//  1) register
+//  2) login
+//  3) remember pw
+//  4) login w google?
+//  5) home page w logout
 
 function AuthForm({ type }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+  const navigation = useNavigate();
   const isLogin = type === "login";
+
+  //Handles log in / sign out
+  const handleLoginOrSignUpAttempt = async (e) => {
+    e.preventDefault();
+
+    //Sign up or login
+    if (!isLogin) {
+      //Password length check
+      if (password.length < 6) {
+        setErrorMsg("Password must be at least 6 characters!");
+        return;
+      }
+
+      //Verifys password and creates new user if succesful
+      if (password === verifyPassword) {
+        try {
+          const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password,
+          );
+          //Redirect user to home page
+          navigation("/");
+        } catch (error) {
+          setErrorMsg("Registration error: " + error);
+        }
+      } else {
+        setErrorMsg("Passwords do not match!");
+      }
+    } else {
+      try {
+        //Attempt to sign in user
+        const user = await signInWithEmailAndPassword(auth, email, password);
+        //Redirect user to home page
+        navigation("/");
+      } catch (error) {
+        setErrorMsg("There was a problem loggin you in! " + error);
+      }
+    }
+  };
 
   return (
     <div className="auth-form-container">
@@ -43,7 +98,11 @@ function AuthForm({ type }) {
           />
         )}
 
-        <button type="submit">{isLogin ? "Login" : "Create Account"}</button>
+        <button onClick={handleLoginOrSignUpAttempt} type="submit">
+          {isLogin ? "Login" : "Create Account"}
+        </button>
+
+        <h6>{errorMsg}</h6>
       </form>
     </div>
   );

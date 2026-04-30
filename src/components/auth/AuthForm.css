@@ -37,3 +37,7 @@ span{
   display: flex;
   gap: 5px;
 }
+
+h6{
+  text-align: center;
+}

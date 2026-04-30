@@ -1,15 +1,15 @@
 :root {
-  --primary-color: #fa0000;
-  --primary-hover: #7e008a;
+  --primary-color: #005304;
+  --primary-hover: #a89553;
 
-  --background: #c5c5c5;
+  --background: #093d0c;
   --card-bg: #d3d3d3;
 
   --text-primary: #000000;
   --text-secondary: #535353;
 
   --button-text-color: #FFFFFF;
-  --button-primary-background: red;
+  --button-primary-background: #3f3100;
 
   --border-radius: 10px;
   --border-width: 2px;
