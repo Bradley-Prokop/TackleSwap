@@ -1,5 +1,5 @@
 import InputField from "./InputField";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./AuthForm.css";
 import {
   createUserWithEmailAndPassword,
@@ -8,22 +8,28 @@ import {
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
 
-//To do
-//  1) register
-//  2) login
-//  3) remember pw
-//  4) login w google?
-//  5) home page w logout
-
 function AuthForm({ type }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [rememberEmail, setRememberEmail] = useState(false);
   const navigation = useNavigate();
   const isLogin = type === "login";
 
-  //Handles log in / sign out
+  //For "Remember Email"
+  useEffect(() => {
+    if (isLogin) {
+      let storedEmail =
+        localStorage.getItem("tackleSwapSavedEmail") || "";
+      if (storedEmail != "") {
+        setEmail(storedEmail);
+        setRememberEmail(true);
+      }
+    }
+  }, []);
+
+  //Handles log in / register
   const handleLoginOrSignUpAttempt = async (e) => {
     e.preventDefault();
 
@@ -34,7 +40,6 @@ function AuthForm({ type }) {
         setErrorMsg("Password must be at least 6 characters!");
         return;
       }
-
       //Verifys password and creates new user if succesful
       if (password === verifyPassword) {
         try {
@@ -55,10 +60,27 @@ function AuthForm({ type }) {
       try {
         //Attempt to sign in user
         const user = await signInWithEmailAndPassword(auth, email, password);
+        //Save users email
+        if (rememberEmail) {
+          localStorage.setItem("tackleSwapSavedEmail", email);
+        }else {
+          localStorage.removeItem("tackleSwapSavedEmail");
+        }
         //Redirect user to home page
         navigation("/");
       } catch (error) {
-        setErrorMsg("There was a problem loggin you in! " + error);
+
+        let msg = error.message;
+
+        if(msg.includes("invalid-credential")){
+          msg = "Incorrect Email or Password!";
+        }else if(msg.includes("missing-password")){
+          msg = "Oops, looks like your missing your password!";
+        }else if(msg.includes("invalid-email")){
+          msg = "Your email is invalid!";
+        }
+        
+        setErrorMsg(msg);
       }
     }
   };
@@ -77,7 +99,11 @@ function AuthForm({ type }) {
 
         {isLogin && (
           <div className="remember-password">
-            <input type="checkbox" />
+            <input 
+            checked={rememberEmail} 
+            type="checkbox"
+            onChange={(e) => setRememberEmail(e.target.checked)} 
+            />
             <span> Remeber Email</span>
           </div>
         )}
