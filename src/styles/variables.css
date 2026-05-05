@@ -1,19 +1,27 @@
 :root {
-  --primary-color: #005304;
-  --primary-hover: #a89553;
+    /*Primary colors*/
+    --primary: #116e17;        
+    --primary-dark: #003803;   
+    --primary-light: #10ca1a;  
 
-  --background: #093d0c;
-  --card-bg: #d3d3d3;
+    /* Extra colors */
+    --wood: #a66a3f;           /* warm leather brown */
+    --wood-dark: #6b4327;      /* dark oak */
+    --wood-light: #c48a5a;     /* sunlit wood */
 
-  --text-primary: #000000;
-  --text-secondary: #535353;
+    /* Background color */
+    --background: #ad8830;     
 
-  --button-text-color: #FFFFFF;
-  --button-primary-background: #3f3100;
+    /* 🪨 Text */
+    --text: #3f3405;
+    --text-light: #e4b13a;
 
-  --navbar-background: #3f3100;
+    /* nav link Buttons */
+    --nav-button-active: #3f3405;
 
-  --border-radius: 10px;
-  --border-width: 2px;
-  
+    /*Fonts*/
+    --title: font-family: ;
+    --paragraph: font-family: ;
+
+    
 }
