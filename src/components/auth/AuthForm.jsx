@@ -104,7 +104,7 @@ function AuthForm({ type }) {
             type="checkbox"
             onChange={(e) => setRememberEmail(e.target.checked)} 
             />
-            <span> Remeber Email</span>
+            <span> Remember Email</span>
           </div>
         )}
 
