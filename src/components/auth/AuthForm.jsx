@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function AuthForm({ type }) {
   const [email, setEmail] = useState("");
@@ -20,8 +21,7 @@ function AuthForm({ type }) {
   //For "Remember Email"
   useEffect(() => {
     if (isLogin) {
-      let storedEmail =
-        localStorage.getItem("tackleSwapSavedEmail") || "";
+      let storedEmail = localStorage.getItem("tackleSwapSavedEmail") || "";
       if (storedEmail != "") {
         setEmail(storedEmail);
         setRememberEmail(true);
@@ -63,23 +63,22 @@ function AuthForm({ type }) {
         //Save users email
         if (rememberEmail) {
           localStorage.setItem("tackleSwapSavedEmail", email);
-        }else {
+        } else {
           localStorage.removeItem("tackleSwapSavedEmail");
         }
         //Redirect user to home page
         navigation("/");
       } catch (error) {
-
         let msg = error.message;
 
-        if(msg.includes("invalid-credential")){
+        if (msg.includes("invalid-credential")) {
           msg = "Incorrect Email or Password!";
-        }else if(msg.includes("missing-password")){
+        } else if (msg.includes("missing-password")) {
           msg = "Oops, looks like your missing your password!";
-        }else if(msg.includes("invalid-email")){
+        } else if (msg.includes("invalid-email")) {
           msg = "Your email is invalid!";
         }
-        
+
         setErrorMsg(msg);
       }
     }
@@ -99,10 +98,10 @@ function AuthForm({ type }) {
 
         {isLogin && (
           <div className="remember-password">
-            <input 
-            checked={rememberEmail} 
-            type="checkbox"
-            onChange={(e) => setRememberEmail(e.target.checked)} 
+            <input
+              checked={rememberEmail}
+              type="checkbox"
+              onChange={(e) => setRememberEmail(e.target.checked)}
             />
             <span> Remember Email</span>
           </div>
@@ -129,6 +128,15 @@ function AuthForm({ type }) {
         </button>
 
         <h6>{errorMsg}</h6>
+
+        <h5>
+          {isLogin
+            ? "Don't have an account?"
+            : "Already have an account with us?"}
+          <NavLink to={isLogin ? "/signup" : "/login"}>
+            {isLogin ? " Sign Up!" : " Login!"}
+          </NavLink>
+        </h5>
       </form>
     </div>
   );

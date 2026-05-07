@@ -6,18 +6,18 @@
 
     /* Extra colors */
     --wood: #a66a3f;           /* warm leather brown */
-    --wood-dark: #6b4327;      /* dark oak */
+    --dark-brown: #4e2a10;      /* dark oak */
     --wood-light: #c48a5a;     /* sunlit wood */
 
     /* Background color */
     --background: #ad8830;     
 
-    /* 🪨 Text */
+    /* Text */
     --text: #3f3405;
     --text-light: #e4b13a;
 
-    /* nav link Buttons */
-    --nav-button-active: #3f3405;
+    /* Authform */
+    --auth-form-background: #117e07;
 
     /*Fonts*/
     --title: font-family: ;

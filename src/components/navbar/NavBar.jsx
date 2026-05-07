@@ -33,11 +33,13 @@ export default function NavBar() {
         </NavLink>
       </div>
 
+      <div className="nav-right">
         {user ? (
-            <button onClick={()=> auth.signOut()}>Logout</button>
+          <button onClick={() => auth.signOut()}>Logout</button>
         ) : (
-            <button onClick={()=> navigation("\login")}>Login/Sign Up</button>
+          <button onClick={() => navigation("/login")}>Login / Sign Up</button>
         )}
+      </div>
     </div>
   );
 }
