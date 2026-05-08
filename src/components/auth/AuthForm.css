@@ -9,20 +9,20 @@
   gap: 45px;
 }
 
-h2{
+.auth-form-title{
   font-size: clamp(20px, 4vw, 32px);
   text-align: center;
   color: white;
 }
 
-form {
+.auth-form-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
   text-align: center;
 }
 
-button{
+.auth-form-submit-btn{
   background-color: var(--text);
   border-radius: 10px;
   color: white;
@@ -30,16 +30,16 @@ button{
   width: 100%;
 }
 
-h6{
+.error-message{
   color: white;
   font-size: clamp(10px, 2vw, 14px);
 }
 
-h5{
+.auth-form-signup-login-toggle{
   color: var(--text-light);
 }
 
-span{
+.auth-form-remember-email{
   font-size: clamp(9px, 4vw, 16px);
   color: white;
 }
@@ -50,14 +50,14 @@ span{
   color: white;
 }
 
-h5 a {
+.auth-form-signup-login-toggle a {
     color: white;
     text-decoration: none;
     margin-left: 4px;
     font-weight: bold;
 }
 
-h5 a:hover {
+.auth-form-signup-login-toggle a:hover {
     text-decoration: underline;
     color: var(--text-light);
 }

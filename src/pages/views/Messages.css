@@ -1,5 +1,5 @@
 .messages-main-container {
-  height: 100vh;          /* important so it has vertical space */
+  height: 100vh;          
   display: flex;
   justify-content: center; /*horizontal center*/
   align-items: center;     /* vertical center */
