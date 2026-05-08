@@ -17,6 +17,6 @@
     --text-light: #e4b13a;
 
     /*Fonts*/
-    --title: font-family: ;
-    --paragraph: font-family: ;
+    --title: "Courier New", Courier, monospace;
+    --paragraph: "Inter", sans-serif;
 }

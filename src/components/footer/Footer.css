@@ -29,6 +29,7 @@
 .footer-title{
     color: white;
     font-size: clamp(.5rem, 4vw, 2rem);
+    font-family: var(--title);
 }
 
 .footer-img{
@@ -46,6 +47,7 @@
 .footer-navlink{
     text-decoration: none;
     font-weight: bold;
+    font-family: var(--title);
     font-size: clamp(1.5rem, 2vw, 1rem);
     color: var(--text-light);
 }
@@ -73,7 +75,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* background-color: aqua; */
 }
 
 .footer-misc-links{
@@ -88,6 +89,7 @@
 .copy-right{
     color: white;
     font-size: clamp(0.75rem, 1vw, 0.95rem);
+    font-family: var(--title);
     margin-bottom: 2rem;
     margin-top: 2rem;
 }

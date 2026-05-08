@@ -33,6 +33,8 @@ export default function NavBar() {
         </NavLink>
       </div>
 
+      <h4 className="navbar-slogan">Gear up. Trade smart. Fish more.</h4>
+
       <div className="nav-right">
         {user ? (
           <button onClick={() => auth.signOut()}>Logout</button>
