@@ -1,6 +1,33 @@
-h1{
-    color: var(--text);
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
+.home-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.home-search-bar-container{
+    width: 50%;
+    margin-top: 3rem;
+}
+
+.home-hero{
+    width: 75%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid white;
     text-align: center;
+}
+
+.home-hero-title{
+    margin-top: 2rem;
+    font-family: var(--text);
+    color: white;
+}
+
+.home-hero-subtitle{
+    color: var(--title);
+    font-family: var(--paragraph);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
