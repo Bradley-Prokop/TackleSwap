@@ -15,7 +15,7 @@ export default function MyTrades() {
   return (
     <div className="my-trades-main-container">
       {/* Logged out */}
-      {!user && <h5 className="misc-text">Please login to see messages</h5>}
+      {!user && <h5 className="misc-text">Please login to see trades</h5>}
 
       {user && <h1>My Trades</h1>}
     </div>

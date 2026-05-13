@@ -86,9 +86,9 @@ function AuthForm({ type }) {
 
   return (
     <div className="auth-form-container">
-      <h2>{isLogin ? "Welcome back, Login!" : "Create Account"}</h2>
+      <h2 className="auth-form-title">{isLogin ? "Welcome back, Login!" : "Create Account"}</h2>
 
-      <form>
+      <form className="auth-form-form">
         <InputField
           type="email"
           placeholder="Email"
@@ -103,7 +103,7 @@ function AuthForm({ type }) {
               type="checkbox"
               onChange={(e) => setRememberEmail(e.target.checked)}
             />
-            <span> Remember Email</span>
+            <span className="auth-form-remember-email"> Remember Email</span>
           </div>
         )}
 
@@ -123,13 +123,13 @@ function AuthForm({ type }) {
           />
         )}
 
-        <button onClick={handleLoginOrSignUpAttempt} type="submit">
+        <button className="auth-form-submit-btn" onClick={handleLoginOrSignUpAttempt} type="submit">
           {isLogin ? "Login" : "Create Account"}
         </button>
 
-        <h6>{errorMsg}</h6>
+        <h6 className="error-message">{errorMsg}</h6>
 
-        <h5>
+        <h5 className="auth-form-signup-login-toggle">
           {isLogin
             ? "Don't have an account?"
             : "Already have an account with us?"}

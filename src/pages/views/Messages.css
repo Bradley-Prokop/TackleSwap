@@ -1,5 +1,5 @@
 .messages-main-container {
-  height: 100vh;          /* important so it has vertical space */
+  height: 100vh;          
   display: flex;
   justify-content: center; /*horizontal center*/
   align-items: center;     /* vertical center */
@@ -8,4 +8,5 @@
 .misc-text{
     font-size: clamp(1.8rem, 4vw, 1rem);
     color: var(--text);
+    font-family: var(--title);
 }

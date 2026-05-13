@@ -18,8 +18,8 @@ export default function NavBar() {
   }
 
   return (
-    <div className="navbar-container">
-      <img src={logoImg} alt="TackleSwap logo" />
+    <div className="navbar-main-container">
+      <img className="navbar-img" src={logoImg} alt="TackleSwap logo" />
 
       <div className="nav-links">
         <NavLink to="/" end className="nav-link">
@@ -32,6 +32,8 @@ export default function NavBar() {
           Messages
         </NavLink>
       </div>
+
+      <h4 className="navbar-slogan">Gear up. Trade smart. Fish more.</h4>
 
       <div className="nav-right">
         {user ? (
