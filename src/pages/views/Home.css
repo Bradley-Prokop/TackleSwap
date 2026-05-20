@@ -1,33 +1,149 @@
-.home-main-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
+.home-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 }
 
-.home-search-bar-container{
-    width: 50%;
-    margin-top: 3rem;
+.home-first-image-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background-image: url("../../assets/guy_fishing_on_lake.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
 }
 
-.home-hero{
-    width: 75%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 3px solid white;
-    text-align: center;
+.home-search-bar-container {
+  width: 50%;
+  margin-top: 1rem;
 }
 
-.home-hero-title{
-    margin-top: 2rem;
-    font-family: var(--text);
-    color: white;
+.home-hero {
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  /* border: 3px solid var(--primary-dark); */
+  text-align: center;
+  background-color: #ffffff7a;
 }
 
-.home-hero-subtitle{
-    color: var(--title);
-    font-family: var(--paragraph);
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+.home-hero-title {
+  margin-top: 3rem;
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-family: var(--title);
+  color: var(--text);
+}
+
+.home-hero-subtitle {
+  color: var(--text);
+  font-family: var(--title);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.home-our-misson-container {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.our-mission-title {
+  font-family: var(--title);
+  color: white;
+  font-weight: bold;
+  font-size: clamp(2rem, 3vw, 4rem);
+}
+
+.our-mission-hr {
+  margin-top: 1rem;
+}
+
+.our-mission-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: var(--text);
+  color: var(--text);
+  font-weight: 500;
+
+  max-width: 700px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0 1rem;
+}
+
+.home-browse-by-type-contianer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+  text-align: center;
+  background-image: url("../../assets/cabin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.browse-by-type-content-background {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.541);
+  margin-top: 2rem;
+
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.browse-by-type-title {
+  color: var(--text);
+  font-family: var(--title);
+  font-size: clamp(2rem, 3vw, 4rem);
+  margin-top: 6rem;
+}
+
+.browse-by-type-hr {
+  width: 75%;
+  margin: auto;
+  margin-top: 1rem;
+  border: 1px solid var(--dark-brown);
+}
+
+.home-browse-by-type-options {
+  width: 50%;
+  margin-top: 2rem;
+  display: flex;
+  gap: 4rem;
+  font-family: var(--title);
+  padding: 2rem 3rem;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.home-browse-option {
+  background-color: var(--primary-light);
+  border: 2px solid var(--dark-brown);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.home-browse-option-text {
+  color: black;
+  font-weight: bold;
 }

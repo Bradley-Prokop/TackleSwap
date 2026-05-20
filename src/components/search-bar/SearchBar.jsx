@@ -5,7 +5,7 @@ export default function SearchBar(){
     return(
         <div className="search-bar-main-container">
             <img className='search-bar-icon' src={SearchBarImg} alt="Search bar icon" />
-            <input className='search-bar-input' type="text" placeholder='Search' />
+            <input className='search-bar-input' type="text" placeholder='What are you looking for?' />
         </div>
     );
 }

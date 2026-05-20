@@ -10,10 +10,11 @@
     --wood-light: #c48a5a;     /* sunlit wood */
 
     /* Background color */
-    --background: #ad8830;     
+    --background: #cea23b;    
+    /* --background: #ad8830;   */
 
     /* Text */
-    --text: #33250c;
+    --text: #241f0c;
     --text-light: #e4b13a;
 
     /*Fonts*/
