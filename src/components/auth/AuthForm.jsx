@@ -77,6 +77,8 @@ function AuthForm({ type }) {
           msg = "Oops, looks like your missing your password!";
         } else if (msg.includes("invalid-email")) {
           msg = "Your email is invalid!";
+        }else if (msg.includes("email-already-in-use")) {
+          msg = "Email already exists!";
         }
 
         setErrorMsg(msg);
