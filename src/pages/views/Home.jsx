@@ -1,21 +1,20 @@
 import "./Home.css";
-import SearchBar from "../../components/search-bar/SearchBar";
+import { UserPlus, Search, ArrowLeftRight, PackageOpen } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="home-main-container">
+      {/* Hero section */}
       <div className="home-first-image-block">
-        <div className="home-search-bar-container">
-          <SearchBar></SearchBar>
-        </div>
         <div className="home-hero">
-          <h1 className="home-hero-title">Old Gear Piling Up?</h1>
+          <h1 className="home-hero-title">Welcome to Tackle Swap!</h1>
           <p className="home-hero-subtitle">
             Trade, buy, and sell fishing gear with other anglers.
           </p>
         </div>
       </div>
 
+      {/* Mission section */}
       <div className="home-our-misson-container">
         <h1 className="our-mission-title">Our Mission</h1>
         <hr className="our-mission-hr" />
@@ -28,22 +27,42 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="home-browse-by-type-contianer">
-        <div className="browse-by-type-content-background">
-          <h1 className="browse-by-type-title">Browse By Type</h1>
-          <hr className="browse-by-type-hr" />
-          <div className="home-browse-by-type-options">
-            <div className="home-browse-option">
-              <h4 className="home-browse-option-text">Rods</h4>
+      {/* How it works */}
+      <div className="home-how-it-works-container">
+        <div className="home-how-it-works-inner-container">
+          <h1 className="home-how-it-works-title">How it works</h1>
+
+          <div className="home-how-it-works-list-container">
+            <div className="home-how-it-works-list-item">
+              <UserPlus className="home-how-it-works-icon" />
+
+              <h3>Create an Account</h3>
+
+              <p>Join a community of anglers swapping gear.</p>
             </div>
-            <div className="home-browse-option">
-              <h4 className="home-browse-option-text">Reels</h4>
+
+            <div className="home-how-it-works-list-item">
+              <Search className="home-how-it-works-icon" />
+
+              <h3>Browse Fishing Gear</h3>
+
+              <p>Explore rods, reels, tackle, and more.</p>
             </div>
-            <div className="home-browse-option">
-              <h4 className="home-browse-option-text">Tackle</h4>
+
+            <div className="home-how-it-works-list-item">
+              <ArrowLeftRight className="home-how-it-works-icon" />
+
+              <h3>Trade or Sell</h3>
+
+              <p>Swap gear or list items for sale.</p>
             </div>
-            <div className="home-browse-option">
-              <h4 className="home-browse-option-text">Other</h4>
+
+            <div className="home-how-it-works-list-item">
+              <PackageOpen className="home-how-it-works-icon" />
+
+              <h3>Free Up Space</h3>
+
+              <p>Clear out unused gear from your tackle box.</p>
             </div>
           </div>
         </div>
