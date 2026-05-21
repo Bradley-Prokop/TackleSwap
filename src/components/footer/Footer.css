@@ -92,3 +92,21 @@
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
+
+/* mobile */
+@media(max-width: 520px) {
+
+    .footer-title{
+        font-size: 2rem;
+    }
+
+    .footer-img{
+        height: 3rem;
+    }
+
+    .footer-navlink{
+        font-size: 1.25rem;
+        margin-top: 1rem;
+    }
+    
+}

@@ -53,7 +53,7 @@
 
 .our-mission-title {
   font-family: var(--title);
-  color: white;
+  color: var(--text);
   font-weight: bold;
   font-size: clamp(2rem, 3vw, 4rem);
 }
@@ -152,7 +152,6 @@
 
   border-radius: 20px;
 
-  /* lighter gray */
   background: var(--primary);
 
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -209,8 +208,14 @@
 
 /* Mobile */
 @media (max-width: 520px) {
+
+  .home-our-misson-container{
+    width: 75%;
+  }
+
   .home-how-it-works-container {
     padding: 3rem 1rem;
+    height: 150%;
   }
 
   .home-how-it-works-list-container {
