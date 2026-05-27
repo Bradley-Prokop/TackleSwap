@@ -41,3 +41,15 @@
   width: 45px;
   height: 45px;
 }
+
+.search-bar-submit-btn{
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: .25em;
+  color: white;
+  font-weight: bold;
+}
+
+.search-bar-submit-btn:hover{
+  background-color: var(--primary-light);
+}
