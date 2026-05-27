@@ -13,6 +13,7 @@ export default function Footer() {
 
         <div className="footer-link-content">
             <NavLink to="/" className="footer-navlink">Home</NavLink>
+            <NavLink to="/browse" className="footer-navlink">Browse</NavLink>
             <NavLink to="/my-trades" className="footer-navlink">My trades</NavLink>
             <NavLink to="/messages" className="footer-navlink">Messages</NavLink>
         </div>

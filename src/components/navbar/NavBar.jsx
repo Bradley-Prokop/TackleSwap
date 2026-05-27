@@ -36,6 +36,9 @@ export default function NavBar() {
             <NavLink to="/" end className="nav-link">
               Home
             </NavLink>
+            <NavLink to="/browse" className="nav-link">
+              Browse
+            </NavLink>
             <NavLink to="/my-trades" className="nav-link">
               My Trades
             </NavLink>
@@ -84,6 +87,7 @@ export default function NavBar() {
 
           <div className="hamburger-popup-menu-navlink-container">
             <NavLink onClick={toggleMenuIsOpen}  to="/" className="hamburger-popup-menu-navlinks">Home</NavLink>
+            <NavLink onClick={toggleMenuIsOpen}  to="/browse" className="hamburger-popup-menu-navlinks">Browse</NavLink>
             <NavLink onClick={toggleMenuIsOpen}  to="/my-trades" className="hamburger-popup-menu-navlinks">My Trades</NavLink>
             <NavLink onClick={toggleMenuIsOpen}  to="/Messages" className="hamburger-popup-menu-navlinks">Messages</NavLink>
           </div>
