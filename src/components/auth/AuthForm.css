@@ -163,16 +163,11 @@
 }
 
 /* REMEMBER EMAIL SECTION */
-.remember-password {
+.remember-password-container {
   display: flex;
   align-items: center;
-
-  justify-content: center;
-
   gap: 6px;
-
   color: white;
-
   flex-wrap: wrap;
 }
 

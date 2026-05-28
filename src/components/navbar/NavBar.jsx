@@ -39,12 +39,12 @@ export default function NavBar() {
             <NavLink to="/browse" className="nav-link">
               Browse
             </NavLink>
-            <NavLink to="/my-trades" className="nav-link">
-              My Trades
+            <NavLink to="/listings" className="nav-link">
+              Listings
             </NavLink>
-            <NavLink to="/messages" className="nav-link">
-              Messages
-            </NavLink>
+            {/* <NavLink to="/" className="nav-link">
+              
+            </NavLink> */}
           </div>
 
           <h4 className="navbar-slogan">Gear up. Trade smart. Fish more.</h4>
@@ -88,8 +88,7 @@ export default function NavBar() {
           <div className="hamburger-popup-menu-navlink-container">
             <NavLink onClick={toggleMenuIsOpen}  to="/" className="hamburger-popup-menu-navlinks">Home</NavLink>
             <NavLink onClick={toggleMenuIsOpen}  to="/browse" className="hamburger-popup-menu-navlinks">Browse</NavLink>
-            <NavLink onClick={toggleMenuIsOpen}  to="/my-trades" className="hamburger-popup-menu-navlinks">My Trades</NavLink>
-            <NavLink onClick={toggleMenuIsOpen}  to="/Messages" className="hamburger-popup-menu-navlinks">Messages</NavLink>
+            <NavLink onClick={toggleMenuIsOpen}  to="/listings" className="hamburger-popup-menu-navlinks">Listings</NavLink>
           </div>
 
           <div className="hamburger-popup-menu-auth-btn-container">

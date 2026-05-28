@@ -19,7 +19,7 @@ export default function SearchBar({ onSearch }) {
       />
       <input
         className="search-bar-input"
-        type="text"
+        type="search"
         placeholder="What are you looking for?"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}

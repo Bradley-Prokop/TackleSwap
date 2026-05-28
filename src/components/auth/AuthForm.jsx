@@ -99,7 +99,7 @@ function AuthForm({ type }) {
         />
 
         {isLogin && (
-          <div className="remember-password">
+          <div className="remember-password-container">
             <input
               checked={rememberEmail}
               type="checkbox"
